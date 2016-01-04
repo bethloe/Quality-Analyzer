@@ -2,7 +2,7 @@
 Automatically ranks and classifies Wikipedia articles based on their quality
 
 ## Screenshots
-![](https://github.com/bethloe/Quality-Analyzer/blob/master/QA-screenshot1.PNG)
+![](https://github.com/bethloe/Quality-Analyzer/blob/master/QA_screenshot1.PNG)
 
 ## How to use
 http://tools.wmflabs.org/quality-analyzer/
