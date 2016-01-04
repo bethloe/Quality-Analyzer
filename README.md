@@ -1,5 +1,5 @@
 # Quality-Analyzer
-Automatically ranks and classifies Wikipedia articles based on their quality
+Automatically ranks and classifies Wikipedia articles based on their quality calculated by Quality Metrics and Mechine Learning approaches
 
 ## Screenshots
 ![](https://github.com/bethloe/Quality-Analyzer/blob/master/QA_screenshot1.PNG)
