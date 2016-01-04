@@ -1,0 +1,1649 @@
+
+
+/********************************************************************************************************************************************
+
+    DROP-DOWN LIST
+
+********************************************************************************************************************************************/
+
+.wrapper-dropdown {
+
+    /* Size & position */
+    position: relative;
+    font-size: 1em;
+    float: left;
+    padding-left: 0.5em;
+
+    /* Styles */
+    vertical-align: middle;
+    line-height: 1.6em;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+
+.wrapper-dropdown span {
+    display: inline-block;
+    float: left;
+    margin-left: 0em !important;
+    margin-top: 0.2em !important;
+    vertical-align: top;
+    line-height: 1.4em;
+    font-size: 1em;
+}
+
+
+.wrapper-dropdown:after {          /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+
+.dropdown-list-icon {
+    display: inline-block;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-top: 0.24em !important;
+    margin-right: 0.4em;
+    background-color: inherit;
+}
+
+
+.wrapper-dropdown .dropdown {       /*ul*/
+
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    -webkit-padding-before: 0em;
+    padding-left: 0.4em;
+
+    max-height: 30em;
+    overflow: hidden;
+    list-style: none;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-top: none;
+}
+
+.wrapper-dropdown .dropdown li {
+    padding: 0em;
+}
+
+.wrapper-dropdown .dropdown li a {
+    display: block;
+    text-decoration: none;
+    vertical-align: top;
+    line-height: 1.7em;
+    color: #666;
+}
+
+
+.wrapper-dropdown .dropdown li:last-of-type a {
+    border: none;
+}
+
+
+/* Hover state */
+.wrapper-dropdown .dropdown li:hover a {
+    color: #57a9d9;
+}
+
+
+/* Active state */
+.wrapper-dropdown.active {
+    box-shadow: none;
+}
+
+.wrapper-dropdown.active span {
+    color: #fff;
+}
+
+.wrapper-dropdown.active:after {
+    border-color: #fff transparent;
+    border-width: 0px 6px 6px 6px;
+}
+
+
+
+/********************************************************************************************************************************************
+
+    SHOW & HIDE SECTION
+
+********************************************************************************************************************************************/
+
+
+.show-and-hide-container {
+    width: 100%;
+    margin: 1em 0em;
+}
+
+
+.show-and-hide-header {
+    display: inline-block;
+    width: 100%;
+    height: 1.4em;
+    margin-top: .1em;
+    vertical-align: middle;
+    font-size: 1em;
+    line-height: 1.6em;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.show-and-hide-header .arrow-icon {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+
+    background-image: url("../libs/ui/images/ui-icons_454545_256x240.png");
+    background-position: -32px -16px;
+}
+
+
+.show-and-hide-header .title {
+    display: inline-block;
+    float: left;
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+    vertical-align: top;
+    color: #1f6080;
+}
+
+
+.show-and-hide-content {
+    width: 100%;
+    max-height: 30em;
+    background: #fff;
+    /*border: 0.1em #ddd solid;*/
+    border-radius: 0.5em;
+}
+
+.show-and-hide-content p {
+    display: inline-block;
+    margin: .4em;
+    font-size: .95em;
+    -webkit-margin-before: 0.5em !important;
+    -webkit-margin-after: 0.5em !important;
+}
+
+
+/* Active state */
+.show-and-hide-header.active .arrow-icon {
+    background-position: -64px -16px;
+}
+
+
+
+/********************************************************************************************************************************************
+
+    Header panel (top of screen)
+
+********************************************************************************************************************************************/
+
+
+#eexcess_vis{
+    width:100%;
+}
+
+
+
+/*
+    Div wrapping the whole header (green bar on the top of the iFrame)
+*/
+#eexcess_header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    height: 5em;
+    padding: .5em 0em;
+    background: -webkit-linear-gradient(top, rgba(102, 102, 102, 1), rgba(115, 115, 115, 1), rgba(102, 102, 102, 1));
+}
+
+
+/*
+    <span> inside #eexcess_message_and_task_section
+    Displays message like "Query Results : xx"
+*/
+#eexcess_header_info_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 16%;
+    text-align: center;
+    color: #fff;
+}
+
+
+#eexcess_header_info_section span {
+    font-size: 1.2em;
+    font-weight: bold;
+    /*text-shadow: 0em 0.1em #888;*/
+    text-shadow: 0em .1em green;
+}
+
+/*
+    <div> on the left side of header
+    Wraps the message and task
+*/
+#eexcess_header_task_section {
+    display: flex;
+    overflow: auto;
+    width: 65%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    box-shadow: inset .2em .2em .5em #ccc, inset -.2em -.2em .5em #ccc;
+}
+
+#eexcess_header_task_section_div{
+	margin: auto;
+}
+
+#eexcess_header_task_section p {
+    width: calc(100% - 1em);
+    //height: calc(500% - .4em);
+    height  20px;
+    margin: .5em;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    color: #444;
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0.2em;
+}
+
+
+p#p_question {
+    font-weight: bold;
+}
+
+
+/*
+    Third and last <div> aligned inside "#eexcess_inner_header"
+    Currently Unused
+*/
+#eexcess_header_control_section {
+    float: right;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+
+#eexcess_header_control_section input[type="button"] {
+    align-self: right;
+    margin: 0em .3em;
+}
+
+#modeSelector {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	align: right; 
+}
+
+
+
+#eexcess_selected_items_section,
+#eexcess_topic_text_section {
+	display: block;
+    position: absolute;
+	float: right;
+    overflow: hidden;
+    padding: .4em 0em;
+    z-index: 999;
+    background: white;
+    box-shadow: .5em .5em 1em #555, -.5em .5em 1em #555;
+    text-align: center;
+}
+
+.eexcess_selected_item {
+    display: inline-flex;
+    align-items: center;
+    padding: .15em;
+    width: 94%;
+    margin: .1em auto;
+    text-align: left;
+    border: solid 1px #ccc;
+    background: rgba(250, 250, 250, 1);
+    box-shadow: 0em 0.1em 0.2em -0.1em #888;
+    color: #529CBF;
+}
+
+
+.eexcess_selected_item span {
+    display: inline-block;
+    float: left;
+    width: calc(100% - 22px);
+    margin-right: 2px;
+}
+
+.eexcess_selected_item img {
+    display: inline-block;
+    float: right;
+    width: 12px;
+    margin: 0px 2px 0px 4px;
+    z-index: 999;
+}
+
+
+#eexcess_topic_text_section p {
+    font-size: 1.1em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin: .2em .7em;
+    text-align: left;
+}
+
+
+/*
+    Contains icon expand/contract
+*/
+#eexcess_expand_contract_icon_section {
+    display: flex;
+    align-items: flex-end;
+    width: 2em;
+	
+}
+
+/********************************************************************************************************************************************
+
+        Main Containers
+
+********************************************************************************************************************************************/
+
+
+
+/*
+    <div> containing everything below the header ("#eexcess_header")
+*/
+#eexcess_main_panel{
+	display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+	height: calc(100% - 6em);
+    text-align: center;
+	vertical-align: top;
+}
+
+
+
+/********************************************************************************************************************************************
+
+   LEFT CONTROL PANEL - Wraps keyword container (tag cloud)
+
+********************************************************************************************************************************************/
+
+/*
+    Main panel (div) on the left side (green)
+
+*/
+#eexcess_controls_left_panel {
+    //display: flex;
+    width: 17%;
+    height: 700px;/*calc(100% - 1em);*/
+    padding: .5em;
+    z-index: 2;
+    background: -webkit-linear-gradient(top, rgba(175, 175, 175, 1), rgba(170, 170, 170, 1));
+    box-shadow: inset .1em .1em .5em #aaa, inset -.1em -.1em .5em #aaa;
+}
+
+/* QM container */
+#eexcess_qm_container{
+    position:relative;
+    overflow-y: auto;
+    width: calc(100% - 0.5em);
+	height: 200px;
+   /* max-height: 50%;*/
+    padding: 8px 4px;
+    /*background: white;*/
+    background: -webkit-linear-gradient(top, rgba(30, 30, 30, 1), rgba(50, 50, 50, 0.5), rgba(30, 30, 30, 1));
+    box-shadow: inset .2em .2em .5em #ccc, inset -.2em -.2em .5em #ccc;
+}
+
+#eexcess_qm_container_rank_button{
+	/*position: absolute;
+    bottom: 00px;
+    right: 0px;*/
+	margin-top:0px;
+	height: 20px;
+	width: 100%;
+	background-color: #aaa; 
+}
+
+/*  Keyword cloud containing keywords in blue sclae  */
+
+#eexcess_measures_container {
+	cursor: pointer;
+    overflow-y: auto;
+    width: calc(100% - 0.5em);
+	height: 200px;
+   /* max-height: 50%;*/
+    padding: 8px 4px;
+    /*background: white;*/
+    background: -webkit-linear-gradient(top, rgba(30, 30, 30, 1), rgba(50, 50, 50, 0.5), rgba(30, 30, 30, 1));
+    box-shadow: inset .2em .2em .5em #ccc, inset -.2em -.2em .5em #ccc;
+}
+
+/*  keywords in keyword container  */
+
+.eexcess_keyword_tag{
+	display: inline-block;
+	pointer-events: all;
+	margin: 0.2em;
+	padding: 3px 5px;
+	/*border: 0.1em #222 solid;*/
+	-webkit-border-radius: 7px;
+    border-radius: 7px;
+	-webkit-box-shadow: 0em 0.1em 0.3em #222;
+    /*box-shadow: 0em 0.1em 0.3em -0.1em #888;*/
+    box-shadow: 0em 0.1em 0.3em #222;
+    color: white;
+    text-shadow: -0.1em 0.1em 0.5em #eee;
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+.eexcess_keyword_tag:hover {
+	color: white;
+    text-shadow: none;
+}
+
+.eexcess_measures_tag{
+	display: inline-block;
+	pointer-events: all;
+	margin: 0.2em;
+	padding: 3px 5px;
+	/*border: 0.1em #222 solid;*/
+	-webkit-border-radius: 7px;
+    border-radius: 7px;
+	-webkit-box-shadow: 0em 0.1em 0.3em #222;
+    /*box-shadow: 0em 0.1em 0.3em -0.1em #888;*/
+    box-shadow: 0em 0.1em 0.3em #222;
+    color: white;
+    text-shadow: -0.1em 0.1em 0.5em #eee;
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+.eexcess_measures_tag:hover {
+	color: white;
+    text-shadow: none;
+}
+/*
+    div on the upper side of #eexcess_controls_left_panel.
+    Wraps #eexcess_controls_chart and #eexcess_controls_chart, which enclose pairs  of span-select DOM elements
+
+
+#eexcess_fixed_controls{
+	height: 20%;
+	margin-top: 2em;
+	margin-bottom: 1%;
+}
+
+
+/*
+    Wraps the first pair span-select, e.g. "Chart  timeline")
+
+#eexcess_controls_chart {
+	margin-left: 5px;
+}
+
+/*
+    <div> for wrapping the divs containing the remaining pairs span-select (".eexcess_mapping_container")
+
+#eexcess_controls_mappings {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+
+/*
+    Contains individual <span>, <select> pairs
+
+.eexcess_mapping_container {
+
+}
+
+
+/*
+    Class for <span> elements labelling the <select> elements$$
+
+.eexcess_controls_title {
+	display: block;
+	float: left;
+	text-align : left;
+	margin-left: 2%;
+	width: 35%;
+	z-index: 3;
+}
+
+/*
+    All <select> elements
+
+#eexcess_select_chart,
+.eexcess_select {
+    margin-left: 40%;
+    width: 58%;
+    display: block;
+}
+
+
+.eexcess_controls_facet_static {
+    display: block;
+    width: 56%;
+    height: 1.3em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 40%;
+    margin right: auto;
+    padding-left: .2em;
+    font-size: 1em;
+    text-align: left;
+
+    background: -webkit-linear-gradient(top,#fefefe, #fff , #fefefe);
+    border: 0.1em #ddd solid;
+    color: #555;
+    box-shadow: 0em 0.1em .1em #999;
+}
+*/
+
+
+
+/********************************************************************************************************************************************
+
+VIS PANEL (center of screen)
+
+********************************************************************************************************************************************/
+
+#eexcess_vis_panel {
+    display: inline-block;
+    width: 61%;
+    height: 100%;
+}
+
+/********************************************************************************************************************************************
+
+    VIS PANEL CONTROLS
+
+********************************************************************************************************************************************/
+
+.eexcess_equation_ranking_operation{
+    width: 100%;
+    height: 4.5em;
+	line-height: 4em;
+	vertical-align: middle;
+    min-height: 2.5em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(200, 200, 200, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+	display: none;
+}
+
+#eexcess_equation_controls{
+	position: relative;
+    display: inline-flex;
+    float: left;
+    width: 100%;
+    height: 4.5%;
+    min-height: 2.5em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(200, 200, 200, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+}
+
+#eexcess_equation_controls_normal_mode{
+	position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 4.5%;
+    min-height: 2.5em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(200, 200, 200, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+}
+
+.equationStackSmall{
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.icon{
+	cursor: pointer;
+	border: 1px solid black;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.icon:hover{
+	background: red;
+}
+
+#eexcess_equation_stack{
+    display: inline-flex;
+    width: 100%;
+    /*min-height: 4.5em;*/
+	background-color: white;
+}
+
+#eexcess_equation_composer{
+	float:left;
+    display: inline-flex;
+    width: 100%;
+   // height: 9%;
+    min-height: 4.5em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(230, 230, 230, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+}
+
+#eexcess_equation_composer_math_table2{
+	float:left;
+    display: none;
+    width: 100%;
+   // height: 9%;
+    min-height: 4.5em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(230, 230, 230, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+}
+
+#ranking_norm_selector{
+	float:left;
+    display: inline-flex;
+    width: 100%;
+   // height: 9%;
+    min-height: 2.5em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(230, 230, 230, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+}
+
+#eexcess_equation_composer_table{
+	float: left;
+}
+
+#eexcess_equation_composer_table td{
+	font-size: 40px;
+	border: 1px solid black;
+	cursor:pointer;
+}
+#eexcess_equation_composer_table td:hover{
+	background-color: red;
+	border: 1px solid black;
+	cursor:pointer;
+}
+
+#eexcess_equation_composer_table2{
+    display: inline;
+	float: left;
+	
+}
+
+#eexcess_equation_composer_table2 td{
+	font-size: 20px;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid black;
+	cursor:pointer;
+}
+#eexcess_equation_composer_table2 td:hover{
+	background-color: red;
+	border: 1px solid black;
+	cursor:pointer;
+}
+
+
+#eexcess_vis_panel_controls {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 9%;
+    min-height: 4.5em;
+}
+
+
+/*
+*   Ranking Controls (upper mid-left)
+*
+*/
+
+#eexcess_ranking_controls {
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(230, 230, 230, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+}
+
+
+#eexcess_ranking_controls button {
+    min-width: 2.1em;
+    height: 1.7em;
+    margin: .6em .3em;
+    padding: .3em .6em;
+    border-radius: .9em;
+}
+
+
+#eexcess_ranking_controls button img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+*   Keyword box (upper mid-right header)
+*
+*/
+#eexcess_keywords_box {
+	overflow-x: hidden;
+    overflow-y: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    float: right;
+    width: 55%;
+    padding: 0em .3em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(230, 230, 230, 1));
+    list-style-type: none;
+    text-align: left;
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+}
+
+#eexcess_keywords_box p {
+	width: 100%;
+    margin-top: 0.2em;
+	margin-bottom: 0.2em;
+	font-size: 1em;
+    text-align: center;
+    color: #777;
+}
+
+.eexcess_keyword_tag_in_box{
+	cursor: default;
+	display: inline-block;
+	text-align: left;
+	min-width: 14%;
+    height: 2em;
+	margin: 0.8em .3em 0.2em 0.3em;
+    padding: .2em;
+	border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	-webkit-box-shadow: 0em 7px 6px -6px #333;
+    box-shadow: 0em 7px 6px -6px #333;
+    -webkit-text-shadow: -0.1em 0.1em 0.5em #eee;
+    text-shadow: -0.1em 0.1em 0.5em #eee;
+}
+
+.eexcess_keyword_tag_in_box:hover {
+    box-shadow: 2px 2px 5px #555, -2px -2px 5px #555;
+}
+
+
+.eexcess_keyword_tag_in_box > text {
+	opacity: 0.5;
+}
+
+.eexcess_weight_slider {
+	margin-top: 0.2em;
+	height: 1em;
+	text-align: left;
+}
+
+.ui-slider-horizontal {
+    height: .5em;
+    margin: .1em;
+}
+
+.ui-widget {
+	font-size: 1em;
+}
+
+.eexcess_weight_slider .ui-slider-range {
+	height: 100%;
+	font-size: 0.9em;
+	font-weight: normal;
+
+	border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+}
+
+.ui-slider-range .label {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 0.3em;
+	line-height: 1.7em;
+	font-size: 1.1em;
+}
+
+.ui-slider .ui-slider-handle {
+	top:-0.2em;
+	width: 0.4em;
+	height: .8em;
+	border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+}
+
+
+.eexcess_tag_img {
+	position: relative;
+	float: right;
+	right: -0.6em;
+	top: -0.4em;
+	z-index: 8040;
+	width: 0.8em;
+	height: 0.8em;
+	cursor: pointer;
+}
+
+.eexcess_tag_img_stat {
+	position: relative;
+	right: -1.2em;
+	top: 0.5em;
+	z-index: 8040;
+	width: 0.8em;
+	height: 0.8em;
+	cursor: pointer;
+}
+
+.eexcess_tag_edit {
+	position: relative;
+	right: -1.4em;
+	top: 0.7em;
+	z-index: 8040;
+	width: 0.8em;
+	height: 0.8em;
+	cursor: pointer;
+}
+
+
+
+/********************************************************************************************************************************************
+
+    CANVAS PANEL (bottom-center)
+
+********************************************************************************************************************************************/
+
+#eexcess_vis_panel_canvas {
+    display: inline-block;
+    width: 100%;
+    height: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#eexcess_vis_panel_canvas_stat {
+    display: inline-block;
+    width: 100%;
+    height: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
+	display: none;
+}
+
+/********************************************************************************************************************************************
+
+    Content List Panel (left-center)
+
+********************************************************************************************************************************************/
+
+
+/*
+    <div> container for the list of recommendations
+*/
+#eexcess_content{
+	display: inline-block;
+    float: left;
+	vertical-align: top;
+    width: 45%;
+}
+
+
+
+/*
+    List body in "#eexcess_content"
+*/
+#eexcess_content ul{
+	clear:both;
+    width: 100%;
+    margin: 0;
+    margin-left: 1px;
+    padding: 0;
+    list-style: none;
+    display:block;
+    padding-bottom: 1px;
+
+}
+
+
+/*
+    <li> items in "#eexcess_content ul". Each <li> wraps 2 container <div>s: ".eexcess_item_ctl" and ".eexcess_ritem_container"
+*/
+.eexcess_list {
+    position: relative;
+    height: 26px;
+    vertical-align: top;
+    -webkit-transition: box-shadow 4s linear;
+}
+
+.eexcess_list a {
+    color: #333;
+}
+/* RANK QMS: */
+
+#rank_QMs{
+	display: inline-block;
+    float: left;
+	vertical-align: top;
+    width: 45%;
+}
+
+
+
+/*
+    List body in "#eexcess_content"
+*/
+#rank_QMs ul{
+	clear:both;
+    width: 100%;
+    margin: 0;
+    margin-left: 1px;
+    padding: 0;
+    list-style: none;
+    display:block;
+    padding-bottom: 1px;
+
+}
+
+
+/*
+    <li> items in "#eexcess_content ul". Each <li> wraps 2 container <div>s: ".eexcess_item_ctl" and ".eexcess_ritem_container"
+*/
+.rank_QMs_list_li {
+list-style-type: none;
+    position: relative;
+    height: 26px;
+    vertical-align: top;
+    -webkit-transition: box-shadow 4s linear;
+}
+
+.rank_QMs_list_li a {
+    color: #333;
+}
+/***************	Encloses item title   **************/
+
+.rank_QMs_list_ritem_container {
+    display: inline-flex;
+    align-items: center;
+    width: calc(100% - 78px);
+    height: 100%;
+    /*margin-left: 2px;*/
+    vertical-align: top;
+    text-align: left;
+}
+
+/***************	<li> background style   **************/
+
+.light_background {
+    background: #eee;
+}
+
+.dark_background {
+    background: #ddd;
+}
+
+/* <li> itmes' hover style */
+.eexcess_list_hover {
+    background: -webkit-linear-gradient(top, rgb(230, 230, 230) 75%, #ccc);
+    /*border: 1px solid #ccc;*/
+}
+
+
+
+/***************	Effects for list items when the ranking changes   **************/
+
+.eexcess_list_moving_up {
+    /*border: 1px solid rgba(0, 250, 0, 0.8);*/
+    /*box-shadow: inset 0.1em 0.1em 0.2em rgba(0, 250, 0, 0.6), inset -0.1em -0.1em 0.2em rgba(0, 250, 0, 0.6);*/
+    box-shadow: inset 1px 1px 2px rgba(0, 250, 0, 0.6), inset -1px -1px 2px rgba(0, 250, 0, 0.6);
+    -webkit-transition: box-shadow 0s linear;
+}
+
+.eexcess_list_moving_down {
+    /*border: 1px solid rgba(250, 10, 10, 0.6);*/
+    /*box-shadow: inset 0.1em 0.1em 0.2em rgba(250, 10, 10, 0.6), inset -0.1em -0.1em 0.2em rgba(250, 10, 10, 0.6);*/
+    box-shadow: inset 1px 1px 2px rgba(250, 10, 10, 0.6), inset -1px -1px 2px rgba(250, 10, 10, 0.6);
+    -webkit-transition: box-shadow 0s linear;
+}
+
+.eexcess_list_not_moving {
+    /*border: 1px solid rgba(128, 128, 128, 0.6);*/
+    /*box-shadow: inset 0.1em 0.1em 0.2em rgba(128, 128, 128, 0.6), inset -0.1em -0.1em 0.2em rgba(128, 128, 128, 0.6);*/
+    box-shadow: inset 1px 1px 2px rgba(128, 128, 128, 0.6), inset -1px -1px 2px rgba(128, 128, 128, 0.6);
+    -webkit-transition: box-shadow 0s linear;
+}
+
+/***************	content list ranking section	**************/
+
+
+.eexcess_ranking_container {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    max-width: 55px;
+    padding-left: 1px;
+}
+
+
+.eexcess_ranking_pos {
+	display: inline-block;
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin: 4px 2px;
+    /*background: -webkit-linear-gradient(top, rgba(255, 175, 0, 0.8) 75%, rgba(235, 155, 0, 0.8));*/
+    background: -webkit-linear-gradient(top, rgba(100, 100, 100, 0.8) 75%, rgba(50, 50, 50, 0.8));
+	-webkit-border-radius: 1em;
+	box-shadow: 0.05em 0.15em 0.3em #888;
+	line-height: 1.8em;
+	font-size: 0.8em;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+    text-shadow: 0em 0.1em #888;
+}
+
+
+.eexcess_ranking_posmoved {
+	display: inline-block;
+	float: left;
+	width: 24px;
+	height: 19px;
+    margin: 6px 2px 4px 2px;
+    line-height: 1.4em;
+    font-size: .8em;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+	color: #222;
+	text-shadow: 0em 0.1em 0 rgba(136, 136, 136, 0.5);
+}
+
+/***************	Encloses item title   **************/
+
+.eexcess_ritem_container {
+    display: inline-flex;
+    align-items: center;
+    width: calc(100% - 140px);
+    height: 100%;
+    margin-left: 2px;
+    vertical-align: top;
+    text-align: left;
+}
+
+
+/***************	Encloses favicon   **************/
+
+.eexcess_favicon_section {
+    display: inline-flex;
+    float: right;
+    width: 80px;
+    margin-right: 2px;
+    vertical-align: top;
+}
+
+.eexcess_favicon_section img{
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+
+
+
+/********************************************************************************************************************************************
+
+    Canvas section (right-center) - displays ranking vis
+
+********************************************************************************************************************************************/
+
+
+/*
+    <div> where the charts (timeline, bar chart) are actually rendered
+*/
+#eexcess_canvas {
+	display: inline-block;
+    width: 55%;
+    min-height: 99%;
+	text-align: left;
+    float: left;
+}
+
+#eexcess_canvas_wikipedians{
+	display: none;
+    width: 26%;
+    min-height: 99%;
+	text-align: left;
+    float: left;
+}
+
+.eexcess_canvas {
+	display: inline-block;
+    width: 49%;
+    min-height: 45%;
+	float: left;
+	padding: 5px;
+}
+
+.eexcess_canvas_inner{
+    width: 50%;
+	height: 100%;
+    min-height: 99%;
+	float: left;
+}
+
+#eexcess_canvas_rankQM {
+	display: inline-block;
+    width: 55%;
+    min-height: 99%;
+	text-align: center;
+}
+
+/*
+    <div> appended to #eexcess_canvas when a message should be displayed. E.g. when a new search is triggered or no data are received.
+    Contains a <span> for the message and optionally an <img> tag (for the loading icon, only for the case of a new search )
+*/
+#eexcess_message_on_canvas{
+	display: block;
+	margin-top: 8em;
+	text-align: center;
+}
+
+
+/*
+    <span> in #eexcess_loading_results
+*/
+
+#eexcess_message_on_canvas span{
+	display: block;
+}
+
+
+#eexcess_loading_results span{
+	display: block;
+	font-size: 1.1em;
+}
+
+
+/********************************************************************************************************************************************
+
+    Document Panel (right) - for visualizing highlighted text
+
+********************************************************************************************************************************************/
+
+
+/*
+*   Document Controls (upper right)
+*
+*/
+#eexcess_document_panel {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 21%;
+    height: calc(100% - 1em);
+    padding: .5em;
+    background: -webkit-linear-gradient(top, rgba(175, 175, 175, 1), rgba(170, 170, 170, 1));
+    box-shadow: inset .1em .1em .5em #aaa, inset -.1em -.1em .5em #aaa;
+}
+
+#eexcess_document_details {
+    display: flex;
+    flex-wrap: wrap;
+    height: 8em;
+    text-align: left;
+    padding: .5em;
+    color: snow;
+    text-shadow: 0em .1em #444
+}
+
+#eexcess_document_details div {
+    display: inline-flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: .2em 0em;
+}
+
+#eexcess_document_details div label {
+    width: 44px;
+}
+
+#eexcess_document_details div h3 {
+    width: calc(100% - 44px);
+    height: 60px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    color: snow;
+    /*text-shadow: 0em .1em green;*/
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.1em;
+}
+
+#eexcess_document_details div h3 strong {
+    /*text-shadow: 0em .1em .5em white, 0em -.1em .5em white;*/
+    text-shadow: 0em .1em #444;
+}
+
+#eexcess_document_details div span {
+}
+#chart1 {
+ display: flex;
+    flex-wrap: wrap;
+	min-height: 18em;
+    text-align: left;
+    padding: .5em;
+    color: black;
+    text-shadow: 0em .1em #444
+}
+
+#eexcess_document_viewer {
+    display: inline-block;
+    width: 100%;
+    height: calc(100% - 9em);
+    /*background: white;*/
+    background: -webkit-linear-gradient(top, rgba(30, 30, 30, 1), rgba(60, 60, 60, 1), rgba(30, 30, 30, 1));
+    box-shadow: inset .2em .2em .5em #ccc, inset -.2em -.2em .5em #ccc;
+    overflow-y: auto;
+}
+
+#eexcess_document_viewer p {
+    margin: .5em 1em;
+    font-size: .95em;
+    line-height: 1.3em;
+    text-align: left;
+    /*color: #444;*/
+    color: white;
+}
+/*
+#eexcess_document_viewer p strong {
+    text-shadow: 0em .1em #444;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************************************
+
+    Bookmark addition panel (appears on favicon clicked)
+
+********************************************************************************************************************************************/
+
+
+.eexcess-bookmark-dialog {
+    position: absolute;
+    right: 4.6em;
+    width: 18em;
+    max-height: 30em;
+    padding: 0.5em;
+    z-index: 999;
+    font-size: 0.9em;
+}
+
+
+.eexcess-bookmark-dialog span {
+    display: inline-block;
+    float: left;
+    width: 19%;
+    margin-top: .1em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    text-align: left;
+}
+
+.eexcess-bookmark-dialog p {
+    display: inline-block;
+    width: 76%;
+    height: auto;
+    margin-top: .1em;
+    font-size: .95em;
+
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+
+.eexcess-bookmark-dialog-title {
+    display: block !important;
+    margin-top: 0.2em !important;
+    margin-bottom: 0.5em;
+    margin-left: 0em !important;
+    text-align: center !important;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: inherit !important;
+}
+
+
+.eexcess-boookmark-dialog-details {
+    width: 100%;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    vertical-align: top;
+}
+
+
+.eexcess-bookmark-dialog-settings {
+    width: 100%;
+    min-height: 2em;
+    margin-bottom: .6em;
+}
+
+
+.eexcess-bookmark-dialog-settings span {
+    margin-top: 0.3em;
+}
+
+
+.eexcess-bookmark-dropdown-list {
+    display: inline-block;
+    width: 68%;
+    height: 1.7em;
+    border: 0.1em #ddd solid;
+}
+
+
+/* Color icon in header of drop-down list */
+.eexcess-bookmark-dropdown-list-icon {
+    display: inline-block;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-top: 0.24em !important;
+    margin-right: 0.4em;
+}
+
+
+.eexcess-bookmark-dialog-optional {
+    float: left;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: .9em;
+    vertical-align: top;
+}
+
+.eexcess-bookmark-dialog-optional p {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 5.2em;
+    font-size: .9em;
+    /* static */
+    color: red;
+}
+
+
+/* Color picker */
+#eexcess-bookmak-dialog-color-picker {
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    margin-top: 0.3em;
+    margin-left: 1.9em;
+    margin-right: .3em;
+    cursor: pointer;
+
+    /* Static color-related style */
+    background-color: #fff;
+    border: 0.1em #ddd solid;
+    box-shadow: inset 4px 4px 6px -6px #666666;
+}
+
+
+
+.eexcess-bookmark-dialog-input-wrapper {
+    display: inline-block;
+    width: 71.5%;
+    margin-top: 0.35em;
+    vertical-align: top;
+}
+
+
+.eexcess-bookmark-dialog-input-wrapper input {
+    width: 100%;
+    height: 1.4em;
+    font-size: 1.1em;
+    text-align: left;
+
+    /* Static color-related style */
+    background-color: white;
+    border: 0.1em #ddd solid;
+    /*box-shadow: 0 1px 0 rgba(0,0,0,0.2);*/
+    box-shadow: inset 4px 4px 6px -6px #666666;
+    color: #666;
+}
+
+
+
+.eexcess-bookmark-buttons-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: .3em;
+}
+
+
+
+.eexcess-bookmark-bookmarked-in-section {
+    width: 100%;
+    margin: 1em 0em;
+}
+
+.eexcess-bookmark-bookmarked-in {
+    display: inline-block;
+    width: 100%;
+    height: 1.7em;
+    margin-top: .2em;
+    vertical-align: middle;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+
+.eexcess-bookmark-bookmarked-in span {
+    display: inline-block;
+    float: left;
+    margin-left: 0em !important;
+    margin-top: 0.2em !important;
+    vertical-align: top;
+    line-height: 1.4em;
+    font-size: 1em;
+}
+
+.eexcess-bookmark-bookmarked-in img {
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin-top: .3em;
+    margin-right: .5em;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.eexcess-bookmark-color-icon {
+    display: inline-block;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-top: 0.25em;
+    margin-right: 0.4em;
+    margin-left: .5em;
+}
+
+
+
+
+#task_question_message {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20em;
+    height: 10em;
+    left: calc(50% - 10em);
+    top: calc(50% - 5em);
+    background: -webkit-linear-gradient(top, #00441b, #006d2c, #00441b);
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+#task_question_message span {
+    width: 100%;
+    margin: .2em 0em;
+    font-size: 1.1em; */
+}
+
+
+/* For equation */ 
+#equition_stack_main{
+	width: 100%;
+	height: 100px;
+	/*float: left;*/
+	font-size: 40px;
+	padding: 2px;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(230, 230, 230, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+	overflow-x: auto;
+    white-space:nowrap;
+	overflow-y: hidden;
+	text-align: left;
+	-ms-overflow-y: hidden;
+}
+#equition_stack_main_combination{
+	width: 100%;
+	height: 100px;
+	/*float: left;*/
+	font-size: 40px;
+	padding: 2px;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(230, 230, 230, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+	overflow-x: auto;
+    white-space:nowrap;
+	overflow-y: hidden;
+	text-align: left;
+	-ms-overflow-y: hidden;
+}
+#equation_stack_text_of_QM{
+	position: relative;
+    display: inline-block;
+    width: 100%;
+    min-height: 2.5em;
+    background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1), rgba(200, 200, 200, 1));
+    box-shadow: inset .1em .1em .5em #ccc, inset -.1em -.1em .5em #ccc;
+	padding-bottom: 35px;
+}
+.eexcess_equation_text{
+	display: inline-block;
+	cursor: default;
+	text-align: left;
+	background: none;
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+	font-size: 40px;
+	width: auto;
+}
+.eexcess_equation_empty_box{
+    display: inline-block;
+	cursor: default;
+	text-align: left;
+	width: 4em;
+    height: 1.5em;
+	-webkit-border-radius: 0.3em;
+	-webkit-box-shadow: 0em 7px 6px -6px #333;
+    box-shadow: 0em 7px 6px -6px #333;
+    -webkit-text-shadow: -0.1em 0.1em 0.5em #eee;
+    text-shadow: -0.1em 0.1em 0.5em #eee;
+	border: 5px solid red;  
+	background: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.eexcess_equation_tag_in_box{
+	cursor: default;
+	display: inline-block;
+	text-align: left;
+	font-size: 16px;
+	overflow:overlay;
+	width: 10em;
+    height: 4em;
+	-webkit-border-radius: 0.3em;
+	-webkit-box-shadow: 0em 7px 6px -6px #333;
+    box-shadow: 0em 7px 6px -6px #333;
+    -webkit-text-shadow: -0.1em 0.1em 0.5em #eee;
+    text-shadow: -0.1em 0.1em 0.5em #eee;
+	padding: 0px;
+	margin: 0px;
+}
+
+.eexcess_equation_tag_in_box:hover {
+    box-shadow: 2px 2px 5px #555, -2px -2px 5px #555;
+}
+
+
+.eexcess_equation_tag_in_box > text {
+	opacity: 0.5;
+}
+
+/* MATH THING: */
+
+.MathJax_Display: {
+    margin: 0px;
+},
+
+.MathJax .merror: {
+    padding: 0px;
+	margin: 0px;
+}
+
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
