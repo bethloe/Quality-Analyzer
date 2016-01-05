@@ -9,7 +9,7 @@ The official website: http://www.david-strohmaier.com/wikilyzer
 ## How to use
 http://tools.wmflabs.org/quality-analyzer/
 
-## Licence
+## License
 The MIT License (MIT)
 
 Copyright (c) 2016 David Strohmaier
